@@ -5,6 +5,8 @@
     <tr>
       <th>Name</th>
       <th>Body</th>
+			<th>New</th>
+			<th>Show</th>
     </tr>
   </thead>
   <tbody>
@@ -12,9 +14,12 @@
       <tr>
         <td><%= article.name %></td>
         <td><%= article.body %></td>
-      </tr>
+				<td><%= link_to "New Article", new_article_path %></td>
+				<td><%= link_to "Show Article", article_path(id: article.id) %></td>
+			</tr>
     <% end %>
   </tbody>
 </table>
 
-			
+
+

@@ -1,0 +1,18 @@
+<h1>Article show</h1>
+
+<table class="article-table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Body</th>
+      <th>New</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><%= @article.name %></td>
+      <td><%= @article.body %></td>
+      <td><%= link_to "New Article", new_article_path %></td>
+    </tr>
+  </tbody>
+</table>
