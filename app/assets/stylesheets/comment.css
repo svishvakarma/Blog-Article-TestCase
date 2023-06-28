@@ -1,0 +1,15 @@
+.comment-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .comment-table th, .comment-table td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .comment-table th {
+    background-color: #f2f2f2;
+  }
+  
