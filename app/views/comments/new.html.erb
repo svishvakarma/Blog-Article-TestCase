@@ -1,0 +1,13 @@
+<h1>Find Article Then Comment Create</h1>
+
+<%= form_with model: [@article,Comment.new] do |form| %>
+
+  <div>
+    <%= form.label :body %><br>
+    <%= form.text_area :body %><br>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -10,12 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_06_28_051509) do
+ActiveRecord::Schema[7.0].define(version: 2023_06_28_075308) do
   create_table "articles", charset: "utf8mb3", force: :cascade do |t|
     t.string "name"
     t.string "body"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "comments", charset: "utf8mb3", force: :cascade do |t|
+    t.string "body"
+    t.bigint "article_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["article_id"], name: "index_comments_on_article_id"
   end
 
 end
