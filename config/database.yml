@@ -1,22 +1,21 @@
 default: &default
-  adapter: postgresql
-  encoding: unicode
+  adapter: mysql2
+  encoding: utf8
   pool: <%= ENV["RAILS_DB_POOL"] || ENV['RAILS_MAX_THREADS'] || 5 %>
   idle_timeout: <%= ENV["RAILS_IDLE_CONNECTION"] ||  60 %>
-  port: <%= ENV['RAILS_DATABASE_PORT'] || 5432 %>
+  port: <%= ENV['RAILS_DATABASE_PORT'] || 3306 %>
   host: localhost
-  username: postgres
-  password: postgres
+  username: root
+  password: root
 
 development:
   <<: *default
-  database: blog_development
+  database: blog-article_development
 
 test:
   <<: *default
-  database: blog_test
+  database: blog-article_test
 
 production:
   <<: *default
-  database: blog_production
-
+  database: blog-article_production
