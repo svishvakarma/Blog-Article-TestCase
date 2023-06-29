@@ -22,8 +22,14 @@ RSpec.describe CommentsController, type: :controller do
     it 'will show a particular comment' do
     get :show, params: { article_id: @article.id, id: @comment.id } 
       expect(response).to have_http_status(302)
-      # response.should redirect_to(article_path)#'/articles#show' #(article_path[@comment])
 
+    end
+  end
+
+  describe "#update " do
+    it 'will update a comment' do
+      put :update, params: { article_id: @article.id,id:@comment.id, "comment": { "body": "jhjdjd" }}
+      expect(response).to have_http_status(302)
     end
   end
 
