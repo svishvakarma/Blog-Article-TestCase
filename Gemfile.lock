@@ -89,16 +89,17 @@ GEM
     debug (1.8.0)
       irb (>= 1.5.0)
       reline (>= 0.3.1)
-<<<<<<< HEAD
-    diff-lcs (1.5.0)
-=======
     devise (4.9.2)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
       railties (>= 4.1.0)
       responders
       warden (~> 1.2.3)
->>>>>>> da94ea1f840028f47ab765b2f5bf9dd37b6dcf4e
+    devise_token_auth (1.2.2)
+      bcrypt (~> 3.0)
+      devise (> 3.5.2, < 5)
+      rails (>= 4.2.0, < 7.1)
+    diff-lcs (1.5.0)
     erubi (1.12.0)
     factory_bot (6.2.1)
       activesupport (>= 5.0.0)
@@ -109,6 +110,7 @@ GEM
       i18n (>= 1.8.11, < 2)
     globalid (1.1.0)
       activesupport (>= 5.0)
+    hashie (5.0.0)
     i18n (1.14.1)
       concurrent-ruby (~> 1.0)
     importmap-rails (1.2.1)
@@ -147,12 +149,18 @@ GEM
     nio4r (2.5.9)
     nokogiri (1.15.2-x86_64-linux)
       racc (~> 1.4)
+    omniauth (2.1.1)
+      hashie (>= 3.4.6)
+      rack (>= 2.2.3)
+      rack-protection
     orm_adapter (0.5.0)
     public_suffix (5.0.1)
     puma (5.6.6)
       nio4r (~> 2.0)
     racc (1.7.1)
     rack (2.2.7)
+    rack-protection (3.0.6)
+      rack
     rack-test (2.1.0)
       rack (>= 1.3)
     rails (7.0.5.1)
@@ -258,15 +266,14 @@ DEPENDENCIES
   byebug
   capybara
   debug
-<<<<<<< HEAD
+  devise
+  devise_token_auth
   factory_bot_rails
   faker
-=======
-  devise
->>>>>>> da94ea1f840028f47ab765b2f5bf9dd37b6dcf4e
   importmap-rails
   jbuilder
   mysql2
+  omniauth
   puma (~> 5.0)
   rails (~> 7.0.5)
   rspec-rails

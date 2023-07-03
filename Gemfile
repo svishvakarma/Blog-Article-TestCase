@@ -28,6 +28,10 @@ gem "stimulus-rails"
 gem "jbuilder"
 
 gem "devise"
+
+gem "devise_token_auth"
+gem 'omniauth'
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 
