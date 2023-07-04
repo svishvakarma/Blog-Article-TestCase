@@ -3,6 +3,45 @@
 class User < ActiveRecord::Base
   extend Devise::Models
   devise :database_authenticatable, :registerable,
-    :recoverable, :rememberable, :validatable
+    :recoverable, :rememberable, :validatable,
+    :omniauthable
   include DeviseTokenAuth::Concerns::User
 end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,8 +1,12 @@
-<%if current_user.present? %>
-  <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+
+<%current_user = User.last%>
+<% if current_user.present?%>
+<%= link_to 'log out',auth_sign_out_path, data: { "turbo-method": :delete } %>
 <% else %>
-  <%= link_to 'login', user_session_path,method: :post %>
-<% end %>
+  <%= link_to 'signup',new_user_registration_path %>
+ <%= link_to 'login',auth_sign_in_path, method: :post%>
+ 
+ <% end %>
 
 <h1>Article index</h1>
 
