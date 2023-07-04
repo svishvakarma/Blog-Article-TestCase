@@ -1,5 +1,7 @@
 class ArticlesController < ApplicationController
- def index
+  before_action :authenticate_user!
+
+	def index
  	@articles = Article.all
  end
  

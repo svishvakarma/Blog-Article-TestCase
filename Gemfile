@@ -30,7 +30,8 @@ gem "jbuilder"
 gem "devise"
 
 gem "devise_token_auth"
-gem 'omniauth'
+gem 'omniauth'  
+gem 'rack-cors'
 
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
