@@ -2,10 +2,10 @@ module Users
   class SessionsController < Devise::SessionsController
     def create
       @user = User.new(log_in_params) 
+      session[:user_id]  = @user.id 
       if @user.save
         redirect_to root_path 
       end
-      session[:user_id]  = @user.id 
     end
  
     def resource_name
@@ -14,8 +14,8 @@ module Users
   
     def destroy 
       @user = User.find(@current_user.id)
-      Devise.sign_out(resource_name)
-      redirect_to root_path
+      session[:user_id] = nil 
+      redirect_to root_path, notice: "logout successuffully" 
     end 
   
     private

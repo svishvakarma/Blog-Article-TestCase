@@ -18,5 +18,6 @@ Rails.application.routes.draw do
   delete '/auth/sign_out/:id'  => 'users/sessions#destroy',  as: :auth_sign_out,
     :via => Devise.mappings[:user].sign_out_via
 
+  delete '/auth'  => 'auth#destroy', as: 'auth'
       
 end

@@ -1,8 +1,10 @@
-
-<% if current_user.logger? %>
-<%= link_to 'Destroy',auth_sign_out_url(id: current_user.id), 
-    data: { "turbo-method": :delete},
-    data: { confirm: "Delete this news item?" } 
+<% session[:user_id] = User.last.id %>
+<% current_user ||= User.find(session[:user_id]) if session[:user_id] %>
+<% byebug %>
+<% if !current_user.nil? %>
+<%= link_to 'Destroy',user_registration_path(current_user), 
+      method: :delete,
+      data: { confirm: "Are you sure?" } 
 %>
 <% else %>
   <%= link_to 'signup',new_user_registration_path %>
