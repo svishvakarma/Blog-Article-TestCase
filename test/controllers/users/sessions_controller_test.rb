@@ -1,7 +1,8 @@
 require 'test_helper'
 
-class UsersControllerTest < ActionDispatch::IntegrationTest
+class Users::SessionsControllerTest < ActionDispatch::IntegrationTest
   test "should get index" do
+    
     def set_devise_mapping(context:)
       env =
         if context.respond_to?(:env_config)
@@ -12,9 +13,5 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
     
       env['devise.mapping'] = Devise.mappings[:user] if env
     end
-    
   end
-
-  set_devise_mapping(context: Rails.application)
-  
 end
