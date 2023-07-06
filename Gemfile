@@ -28,11 +28,10 @@ gem "stimulus-rails"
 gem "jbuilder"
 
 gem "devise"
-
 gem "devise_token_auth"
 gem 'omniauth'  
 gem 'rack-cors'
-
+gem 'stripe'
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 
@@ -60,6 +59,7 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 
   gem 'factory_bot_rails'
+  gem 'dotenv-rails'
 
 end
 

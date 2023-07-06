@@ -1,6 +1,5 @@
 <% session[:user_id] = User.last.id %>
 <% current_user ||= User.find(session[:user_id]) if session[:user_id] %>
-<% byebug %>
 <% if !current_user.nil? %>
 <%= link_to 'Destroy',user_registration_path(current_user), 
       method: :delete,
